@@ -6,20 +6,35 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
+var MathJax = require("mathjax-node");
+
 class BlogPostTemplate extends React.Component {
-  render() {
+
+    getInitialState =  function() {
+        MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$'],['\\(','\\)']]}});
+    }
+    componentDidMount = function (root) {
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+    componentDidUpdate = function (props,state,root) {
+      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+
+    render =  function(){
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
-    return (
+      return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h1
+        className = 'text'
+        >{post.frontmatter.title}</h1>
         <p
+        className = 'text'
           style={{
             ...scale(-1 / 5),
             display: `block`,
@@ -29,7 +44,7 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div className='text' dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -83,7 +98,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
       }
     }
   }

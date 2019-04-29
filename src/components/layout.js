@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import "../../static/style.css"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -16,6 +17,8 @@ class Layout extends React.Component {
             ...scale(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
+              textAlign : `right`,
+              direction : `rtl`
           }}
         >
           <Link
@@ -35,6 +38,7 @@ class Layout extends React.Component {
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
+            textAlign : `right`,
             marginTop: 0,
           }}
         >
@@ -52,7 +56,7 @@ class Layout extends React.Component {
       )
     }
     return (
-      <div
+            <div
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
@@ -60,8 +64,11 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+
+      <div dangerouslySetInnerHTML={{__html: `<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>`}}></div>
+
         <header>{header}</header>
-        <main>{children}</main>
+        <main >{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

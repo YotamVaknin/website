@@ -16,14 +16,37 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
       return (
       <Layout location={this.props.location} title={siteTitle}>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="prev">
+                ← {next.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="next">
+                {previous.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      <h1
         className = 'text'
         >{post.frontmatter.title}</h1>
         <p
@@ -37,6 +60,7 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+
         <div className='text' dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

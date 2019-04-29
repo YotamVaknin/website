@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import "../../static/style.css"
-
 import { rhythm, scale } from "../utils/typography"
 
 function waitForGlobal(name, timeout = 300) {
@@ -80,6 +79,7 @@ class Layout extends React.Component {
         if (location.pathname === rootPath) {
       header = (
         <h1
+        className = 'header'
           style={{
             ...scale(1.5),
             marginBottom: rhythm(1.5),
@@ -102,9 +102,9 @@ class Layout extends React.Component {
       )
     } else {
       header = (
-        <h3
+        <h1
+          className = 'header'
           style={{
-            fontFamily: `Montserrat, sans-serif`,
             textAlign : `right`,
             marginTop: 0,
           }}
@@ -119,7 +119,7 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-        </h3>
+        </h1>
       )
     }
     return (

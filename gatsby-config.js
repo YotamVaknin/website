@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `הבלוג של יותם`,
+    title:`האתר של יותם`,
     author: `יותם וקנין`,
-    description: `I am aware this formulation is not entirely unambiguous`,
-    // description: ``,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    // description: `I am aware this formulation is not entirely unambiguous`,
+    description: ``,
+    siteUrl: `https://yotamvaknin.github.io/`,
     social: {
-      twitter: `tomirendo`,
+      twitter: ``,
     },
   },
   plugins: [

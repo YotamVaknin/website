@@ -27,3 +27,8 @@
 .text blockquote{
   font-size : 14px;
 }
+
+.english{
+  text-align : left;
+  direction : ltr;
+}

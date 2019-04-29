@@ -6,19 +6,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
-var MathJax = require("mathjax-node");
+// var MathJax = require("mathjax-node");
 
 class BlogPostTemplate extends React.Component {
-
-    getInitialState =  function() {
-        MathJax.Hub.Config({tex2jax:{inlineMath:[['$','$'],['\\(','\\)']]}});
-    }
-    componentDidMount = function (root) {
-        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
-    componentDidUpdate = function (props,state,root) {
-      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-    }
 
     render =  function(){
     const post = this.props.data.markdownRemark
@@ -26,6 +16,9 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
       return (
       <Layout location={this.props.location} title={siteTitle}>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -62,16 +55,16 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+            {next && (
+              <Link to={next.fields.slug} rel="prev">
+                ← {next.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+            {previous && (
+              <Link to={previous.fields.slug} rel="next">
+                {previous.frontmatter.title} →
               </Link>
             )}
           </li>

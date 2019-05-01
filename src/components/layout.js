@@ -48,7 +48,7 @@ class Layout extends React.Component {
       waitForGlobal('MathJax').then(() => {
         window.MathJax.Hub.Config({
           tex2jax: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            inlineMath: [['$', '$'], ['\\\\', '\\\\']],
             displayMath: [['$$', '$$'], ['[', ']']],
             processEscapes: true,
             processEnvironments: true,
@@ -78,6 +78,7 @@ class Layout extends React.Component {
 
         if (location.pathname === rootPath) {
       header = (
+        <div>
         <h1
         className = 'header'
           style={{
@@ -99,6 +100,13 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        </div>
+
       )
     } else {
       header = (

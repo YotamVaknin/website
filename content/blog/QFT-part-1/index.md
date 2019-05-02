@@ -1,6 +1,7 @@
 ---
 title: מבוא לתורת השדות חלק א׳
 date: "2019-04-28T20:00:00.284Z"
+abstract: חלק ראשון לסדרת כתבות על תורת השדות הקוונטית - איך זה עובד, למה זו הדרך היחידה לאחד בין קוונטים לתורת היחסות, ומה זה כל משוואות השדה המוזרות האלה.
 ---
 
 
@@ -62,11 +63,3 @@ $$ E^2 = P^2 + m^2 $$
 בפוסטים הבאים אני אראה במפורש משוואה כזו, אבל זה לא נחוץ כרגע. מה שחשוב הוא שהמטרה ברורה - איך אפשר להשתמש במשוואות ברגמן-וויגנר היחסותיות, כדי לכתוב תאוריה קוונטית על גבי מרחב הילברט?
 
 כל זאת ועוד, בפרק הבא.
-
-<!-- [salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg). -->
-<!--
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> firm-textured, round yolk that is bright orange-red in color.
- -->
-<!-- ![Chinese Salty Egg](./salty_egg.jpg) -->

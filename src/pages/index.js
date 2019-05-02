@@ -39,7 +39,7 @@ class BlogIndex extends React.Component {
               <small>{node.frontmatter.date}</small>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                  __html: node.frontmatter.abstract || node.excerpt,
                 }}
               />
             </div>
@@ -67,6 +67,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            abstract
             date(formatString: "MMMM DD, YYYY")
             title
           }

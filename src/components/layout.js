@@ -100,6 +100,7 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
+
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -135,6 +136,7 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
+          // maxWidth: rhythm(24),
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
@@ -145,10 +147,17 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main >{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+
+        <div className = 'text'>
+            האתר הזה עובד ב-chrome, ובו בלבד. אני בכלל משתמש ב-safari, ולכן נוהג שלא להכנס אליו.
+        </div>
         </footer>
+
       </div>
     )
   }

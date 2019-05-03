@@ -154,7 +154,6 @@ class Layout extends React.Component {
         />
 
         <div className = 'text'>
-            האתר הזה עובד ב-chrome, ובו בלבד. אני בכלל משתמש ב-safari, ולכן נוהג שלא להכנס אליו.
         </div>
         </footer>
 

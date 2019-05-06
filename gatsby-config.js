@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title:`האתר של יותם`,
+    title:`האתר`,
     author: `יותם וקנין`,
     // description: `I am aware this formulation is not entirely unambiguous`,
     description: ``,

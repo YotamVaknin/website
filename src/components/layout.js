@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import "../../static/style.css"
 import { rhythm, scale } from "../utils/typography"
+import sentences from "./footers"
 
 function waitForGlobal(name, timeout = 300) {
   return new Promise((resolve, reject) => {
@@ -83,7 +84,7 @@ class Layout extends React.Component {
         className = 'header'
           style={{
             ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            marginBottom: rhythm(0.5),
             marginTop: 0,
               textAlign : `right`,
               direction : `rtl`
@@ -153,7 +154,9 @@ class Layout extends React.Component {
           }}
         />
 
-        <div className = 'text'>
+        <div className='footer-text'>
+        {sentences[Math.floor(Math.random()*sentences.length)]}
+
         </div>
         </footer>
 

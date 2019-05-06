@@ -6,7 +6,7 @@ var sentences = [
   "Most physicists have felt that objections such as those raise by Einstein are not relevent (...) because no consistent alternative interpretation have as yet been suggested. The purpose of this paper is, however, to suggest just such an alternative interpretation.",
   "No, no this is an important discovery. You americans are always trying to find out how something can be used. That's a good way to discover things!",
   "$$\\lim _{n\\to\\infty}n\\left(\\sqrt[n]{x}-1\\right)=\\ln x$$",
-  "Madhava series are infinite series expressions discovered by Madhava of Sangamagrama (c. 1350 – c. 1425). These expressions are the Maclaurin series expansions of the trigonometric sine, cosine and arctangent functions, and the special case of the power series expansion of the arctangent function yielding a formula for computing $ \\pi$.",
+  "$$ \\sum_{n=0}^{\\infty} f^{(n)}(0) = \\int_0^{\\infty} e^{-x} f(x) dx$$",
 ]
 
 export default sentences;

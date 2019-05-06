@@ -1,7 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { FacebookProvider, Comments } from 'react-facebook';
 
-import Bio from "../components/bio"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -9,6 +10,9 @@ import { rhythm, scale } from "../utils/typography"
 // var MathJax = require("mathjax-node");
 
 class BlogPostTemplate extends React.Component {
+    componetDidMount = function(){
+      this.props.url_for_facebook_comments = window.location.href;
+    }
 
     render =  function(){
     const post = this.props.data.markdownRemark
@@ -62,13 +66,6 @@ class BlogPostTemplate extends React.Component {
         </p>
 
         <div className='text' dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
-
         <ul
           style={{
             display: `flex`,
@@ -93,6 +90,16 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+      <FacebookProvider appId="610647152789300">
+        <Comments href={this.props.url_for_facebook_comments} width="630"/>
+      </FacebookProvider>
+
+
       </Layout>
     )
   }

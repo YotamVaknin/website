@@ -12,6 +12,7 @@ import { rhythm, scale } from "../utils/typography"
 class BlogPostTemplate extends React.Component {
     componetDidMount = function(){
       this.props.url_for_facebook_comments = window.location.href;
+      console.log(this.props.url_for_facebook_comments);
     }
 
     render =  function(){

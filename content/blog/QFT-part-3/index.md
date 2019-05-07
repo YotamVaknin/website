@@ -121,7 +121,7 @@ $$ \sum _i\left\lvert p _{1}^{i}\right\rangle \left\langle p _{2}^{i}\right\rver
 
 בגלל שאופרטורי הסולם מאפשרים לנו לתאר כל איבר מטריצה, זוגות שלהם פורסים את מרחב האופרטורים של מרחב ההילברט שלנו. אנחנו נוכל לכן לכתוב כל אופרטור, ובפרט את ההמילטוניאן, רק באמצעותם. בואו נתרגל את זה לרגע. קודם שאלתי מה הדרך ההגיונית לכתוב את ההמילטוניאן החופשי של חלקיקים חופשיים. באמצעות האופרטורים שלנו, התשובה היא פשוטה מאוד:
 
-$$H=  \sum _i\frac{\left(P^{i}\right)^{2}}{2m}=\sum _i\frac{\left(p _{1}^{2}\left\lvert p _{1}^{i}\right\rangle \left\langle p _{1}\right\rvert +p _{2}^{2}\left\lvert p _{2}^{i}\right\rangle \left\langle p _{2}^{i}\right\rvert +… \right)}{2m}=\sum _{i}\frac{p _{i}^{2}}{2m}a _{i}^{\dagger}a _{i} $$
+$$H=  \sum _i\frac{\left(P^{i}\right)^{2}}{2m}=\sum _i\frac{\left(p _{1}^{2}\left\lvert p _{1}^{i}\right\rangle \left\langle p^i _{1}\right\rvert +p _{2}^{2}\left\lvert p _{2}^{i}\right\rangle \left\langle p _{2}^{i}\right\rvert +… \right)}{2m}=\sum _{i}\frac{p _{i}^{2}}{2m}a _{i}^{\dagger}a _{i} $$
 
 כלומר יש לנו אופרטור ש״סופר״ את כמות החלקיקים בכל תנע אפשרי. בהמילטוניאן הזה אני ״סוכם״ על תנעים האפשריים, מה שמציע שהם לא רציפים. אותו הפורמליזם בדיוק מאפשר לעבוד גם עם תנעים רציפים, וכל מה שצריך כדי לעשות את זה הוא להגדיר יחסי חילוף קצת שונים שיסדרו את היחידות, ספציפית:
 

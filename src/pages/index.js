@@ -18,6 +18,9 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         {posts.map(({ node }) => {
+          if (node.frontmatter.title.indexOf("Hide") !== -1){
+            return <div> </div>
+          }
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div
